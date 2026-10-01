@@ -1,0 +1,9 @@
+{
+  "format_version": "1.1.0",
+  "ltw_mobs:sky_habitat_marker": {
+    "sound": "amethyst_block"
+  },
+  "ltw_mobs:sea_habitat_marker": {
+    "sound": "stone"
+  }
+}

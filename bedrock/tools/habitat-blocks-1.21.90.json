@@ -1,0 +1,185 @@
+{
+  "source": "https://raw.githubusercontent.com/Mojang/bedrock-samples/v1.21.90.3/metadata/vanilladata_modules/mojang-blocks.json",
+  "blocks": {
+    "minecraft:air": {},
+    "minecraft:allium": {},
+    "minecraft:amethyst_block": {},
+    "minecraft:amethyst_cluster": {
+      "minecraft:block_face": {
+        "name": "minecraft:block_face",
+        "type": "string",
+        "values": [
+          {
+            "value": "down"
+          },
+          {
+            "value": "up"
+          },
+          {
+            "value": "north"
+          },
+          {
+            "value": "south"
+          },
+          {
+            "value": "west"
+          },
+          {
+            "value": "east"
+          }
+        ]
+      }
+    },
+    "minecraft:brain_coral_block": {},
+    "minecraft:calcite": {},
+    "minecraft:cherry_leaves": {
+      "persistent_bit": {
+        "name": "persistent_bit",
+        "type": "bool",
+        "values": [
+          {
+            "value": false
+          },
+          {
+            "value": true
+          }
+        ]
+      },
+      "update_bit": {
+        "name": "update_bit",
+        "type": "bool",
+        "values": [
+          {
+            "value": false
+          },
+          {
+            "value": true
+          }
+        ]
+      }
+    },
+    "minecraft:cherry_log": {
+      "pillar_axis": {
+        "name": "pillar_axis",
+        "type": "string",
+        "values": [
+          {
+            "value": "y"
+          },
+          {
+            "value": "x"
+          },
+          {
+            "value": "z"
+          }
+        ]
+      }
+    },
+    "minecraft:dirt": {},
+    "minecraft:fern": {},
+    "minecraft:grass_block": {},
+    "minecraft:jungle_leaves": {
+      "persistent_bit": {
+        "name": "persistent_bit",
+        "type": "bool",
+        "values": [
+          {
+            "value": false
+          },
+          {
+            "value": true
+          }
+        ]
+      },
+      "update_bit": {
+        "name": "update_bit",
+        "type": "bool",
+        "values": [
+          {
+            "value": false
+          },
+          {
+            "value": true
+          }
+        ]
+      }
+    },
+    "minecraft:jungle_log": {
+      "pillar_axis": {
+        "name": "pillar_axis",
+        "type": "string",
+        "values": [
+          {
+            "value": "y"
+          },
+          {
+            "value": "x"
+          },
+          {
+            "value": "z"
+          }
+        ]
+      }
+    },
+    "minecraft:sand": {},
+    "minecraft:sandstone": {},
+    "minecraft:sea_lantern": {},
+    "minecraft:stone": {},
+    "minecraft:water": {
+      "liquid_depth": {
+        "name": "liquid_depth",
+        "type": "int",
+        "values": [
+          {
+            "value": 0
+          },
+          {
+            "value": 1
+          },
+          {
+            "value": 2
+          },
+          {
+            "value": 3
+          },
+          {
+            "value": 4
+          },
+          {
+            "value": 5
+          },
+          {
+            "value": 6
+          },
+          {
+            "value": 7
+          },
+          {
+            "value": 8
+          },
+          {
+            "value": 9
+          },
+          {
+            "value": 10
+          },
+          {
+            "value": 11
+          },
+          {
+            "value": 12
+          },
+          {
+            "value": 13
+          },
+          {
+            "value": 14
+          },
+          {
+            "value": 15
+          }
+        ]
+      }
+    }
+  }
+}

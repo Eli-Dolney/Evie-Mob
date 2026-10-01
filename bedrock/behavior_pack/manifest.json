@@ -1,0 +1,60 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "LTW Mobs Bedrock \u2014 Behaviors",
+    "description": "Evie and Eli habitats and companions test build 0.2.0",
+    "uuid": "ea868342-7302-5648-9798-d9e1b2d53416",
+    "version": [
+      0,
+      2,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      90
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "725431d7-0fca-5d90-92f4-b11552bf9ddf",
+      "version": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "entry": "scripts/main.js",
+      "uuid": "7aa16015-3acd-5ba4-98a7-856b04ec7a1b",
+      "version": [
+        0,
+        2,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "887f24a7-0254-53a8-9576-6e05c524eb07",
+      "version": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.0.0"
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "LTW family"
+    ],
+    "product_type": "addon"
+  }
+}

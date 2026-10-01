@@ -1,0 +1,33 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "ltw_mobs:sea_habitat_feature"
+    },
+    "structure_name": "ltw_mobs:sea_lagoon",
+    "adjustment_radius": 0,
+    "facing_direction": "north",
+    "constraints": {
+      "block_intersection": {
+        "block_allowlist": [
+          "minecraft:air",
+          "minecraft:water",
+          "minecraft:flowing_water",
+          "minecraft:stone",
+          "minecraft:sand",
+          "minecraft:sandstone",
+          "minecraft:gravel",
+          "minecraft:dirt",
+          "minecraft:clay",
+          "minecraft:seagrass",
+          "minecraft:kelp",
+          "minecraft:brain_coral_block",
+          "minecraft:bubble_coral_block",
+          "minecraft:fire_coral_block",
+          "minecraft:horn_coral_block",
+          "minecraft:tube_coral_block"
+        ]
+      }
+    }
+  }
+}

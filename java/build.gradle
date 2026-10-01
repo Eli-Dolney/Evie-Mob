@@ -1,0 +1,23 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.147'
+}
+version = '1.1.0'
+group = 'com.ltw.mobs'
+base { archivesName = 'ltw_mobs' }
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+neoForge {
+    version = '21.1.235'
+    runs {
+        client { client() }
+        server { server(); programArgument '--nogui'; gameDirectory = project.file('run-server') }
+        gameTestServer { type = 'gameTestServer'; gameDirectory = project.file('run-tests'); systemProperty 'neoforge.enabledGameTestNamespaces', 'ltw_mobs' }
+    }
+    mods { ltw_mobs { sourceSet(sourceSets.main) } }
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+tasks.named('runServer', JavaExec).configure { standardInput = System.in }
+tasks.named('jar', Jar).configure {
+    exclude 'com/ltw/mobs/CompanionTests.class'
+    exclude 'data/ltw_mobs/structure/empty.nbt'
+}

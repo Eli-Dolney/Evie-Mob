@@ -1,0 +1,395 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "ltw_mobs:evie",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "properties": {
+        "ltw_mobs:tamed": {
+          "type": "bool",
+          "default": false,
+          "client_sync": true
+        },
+        "ltw_mobs:saddled": {
+          "type": "bool",
+          "default": false,
+          "client_sync": true
+        },
+        "ltw_mobs:stay": {
+          "type": "bool",
+          "default": true,
+          "client_sync": true
+        },
+        "ltw_mobs:flying": {
+          "type": "bool",
+          "default": false,
+          "client_sync": true
+        },
+        "ltw_mobs:recovering": {
+          "type": "bool",
+          "default": false,
+          "client_sync": true
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "ltw_companion",
+          "evie",
+          "mob"
+        ]
+      },
+      "minecraft:health": {
+        "value": 100,
+        "max": 100
+      },
+      "minecraft:collision_box": {
+        "width": 2.4,
+        "height": 3.2
+      },
+      "minecraft:movement": {
+        "value": 0.24
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:persistent": {},
+      "minecraft:nameable": {},
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0,
+        "breathes_air": true,
+        "breathes_water": true
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
+        ]
+      },
+      "minecraft:tameable": {
+        "probability": 0.0,
+        "tame_items": [],
+        "tame_event": {
+          "event": "ltw_mobs:tame",
+          "target": "self"
+        }
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+              },
+              "event": "ltw_mobs:noop",
+              "target": "self"
+            },
+            "interact_text": "action.interact.ltw_mobs.care"
+          }
+        ]
+      },
+      "minecraft:flying_speed": {
+        "value": 0.065
+      },
+      "minecraft:jump.static": {
+        "jump_power": 0.4
+      },
+      "minecraft:variable_max_auto_step": {
+        "base_value": 1.0,
+        "controlled_value": 1.0,
+        "jump_prevented_value": 1.0
+      },
+      "minecraft:behavior.player_ride_tamed": {
+        "priority": 1
+      }
+    },
+    "component_groups": {
+      "ltw_mobs:tamed": {
+        "minecraft:is_tamed": {},
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "deals_damage": "no"
+            }
+          ]
+        }
+      },
+      "ltw_mobs:follow": {
+        "minecraft:behavior.follow_owner": {
+          "priority": 3,
+          "speed_multiplier": 1.2,
+          "start_distance": 7,
+          "stop_distance": 4,
+          "can_teleport": false
+        }
+      },
+      "ltw_mobs:saddled": {
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "player"
+          ],
+          "controlling_seat": 0,
+          "pull_in_entities": false,
+          "crouching_skip_interact": false,
+          "rider_can_interact": false,
+          "interact_text": "action.interact.ltw_mobs.ride",
+          "dismount_mode": "default",
+          "seats": [
+            {
+              "position": [
+                0,
+                1.8,
+                -0.15
+              ],
+              "third_person_camera_radius": 8.0,
+              "camera_relax_distance_smoothing": 6.0
+            }
+          ]
+        }
+      },
+      "ltw_mobs:ground": {
+        "minecraft:physics": {
+          "has_gravity": true,
+          "has_collision": true
+        },
+        "minecraft:movement.basic": {},
+        "minecraft:navigation.walk": {
+          "can_path_over_water": false,
+          "avoid_water": true,
+          "avoid_damage_blocks": true
+        },
+        "minecraft:input_ground_controlled": {}
+      },
+      "ltw_mobs:flight": {
+        "minecraft:physics": {
+          "has_gravity": false,
+          "has_collision": true
+        },
+        "minecraft:movement.hover": {},
+        "minecraft:can_fly": {},
+        "minecraft:navigation.hover": {
+          "can_path_from_air": true,
+          "can_path_over_water": true
+        },
+        "minecraft:input_air_controlled": {
+          "strafe_speed_modifier": 0.65,
+          "backwards_movement_modifier": 0.5
+        }
+      },
+      "ltw_mobs:vulnerable": {
+        "minecraft:health": {
+          "value": 1000000,
+          "max": 1000000
+        },
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "cause": "fall",
+              "deals_damage": "no"
+            }
+          ]
+        }
+      },
+      "ltw_mobs:recovery": {
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "deals_damage": "no"
+            }
+          ]
+        },
+        "minecraft:physics": {
+          "has_gravity": false,
+          "has_collision": true
+        }
+      },
+      "ltw_mobs:boost": {
+        "minecraft:movement": {
+          "value": 0.384
+        },
+        "minecraft:flying_speed": {
+          "value": 0.10400000000000001
+        }
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "ltw_mobs:ground"
+          ]
+        }
+      },
+      "ltw_mobs:tame": {
+        "add": {
+          "component_groups": [
+            "ltw_mobs:tamed"
+          ]
+        },
+        "set_property": {
+          "ltw_mobs:tamed": true,
+          "ltw_mobs:stay": true
+        }
+      },
+      "ltw_mobs:saddle": {
+        "add": {
+          "component_groups": [
+            "ltw_mobs:saddled"
+          ]
+        },
+        "set_property": {
+          "ltw_mobs:saddled": true
+        }
+      },
+      "ltw_mobs:follow": {
+        "add": {
+          "component_groups": [
+            "ltw_mobs:follow"
+          ]
+        },
+        "set_property": {
+          "ltw_mobs:stay": false
+        }
+      },
+      "ltw_mobs:stay": {
+        "remove": {
+          "component_groups": [
+            "ltw_mobs:follow"
+          ]
+        },
+        "set_property": {
+          "ltw_mobs:stay": true
+        }
+      },
+      "ltw_mobs:mount": {
+        "remove": {
+          "component_groups": [
+            "ltw_mobs:follow"
+          ]
+        },
+        "set_property": {
+          "ltw_mobs:stay": false
+        }
+      },
+      "ltw_mobs:flight": {
+        "remove": {
+          "component_groups": [
+            "ltw_mobs:ground"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "ltw_mobs:flight"
+          ]
+        },
+        "set_property": {
+          "ltw_mobs:flying": true
+        }
+      },
+      "ltw_mobs:ground": {
+        "remove": {
+          "component_groups": [
+            "ltw_mobs:flight"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "ltw_mobs:ground"
+          ]
+        },
+        "set_property": {
+          "ltw_mobs:flying": false
+        }
+      },
+      "ltw_mobs:noop": {},
+      "ltw_mobs:boost_on": {
+        "add": {
+          "component_groups": [
+            "ltw_mobs:boost"
+          ]
+        }
+      },
+      "ltw_mobs:boost_off": {
+        "remove": {
+          "component_groups": [
+            "ltw_mobs:boost"
+          ]
+        }
+      },
+      "ltw_mobs:protected": {
+        "remove": {
+          "component_groups": [
+            "ltw_mobs:vulnerable"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "ltw_mobs:tamed"
+          ]
+        }
+      },
+      "ltw_mobs:vulnerable": {
+        "remove": {
+          "component_groups": [
+            "ltw_mobs:tamed"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "ltw_mobs:tamed",
+            "ltw_mobs:vulnerable"
+          ]
+        }
+      },
+      "ltw_mobs:recover": {
+        "remove": {
+          "component_groups": [
+            "ltw_mobs:follow",
+            "ltw_mobs:flight",
+            "ltw_mobs:ground",
+            "ltw_mobs:boost"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "ltw_mobs:recovery"
+          ]
+        },
+        "set_property": {
+          "ltw_mobs:recovering": true,
+          "ltw_mobs:stay": true,
+          "ltw_mobs:flying": false
+        }
+      },
+      "ltw_mobs:recovered": {
+        "remove": {
+          "component_groups": [
+            "ltw_mobs:recovery"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "ltw_mobs:ground"
+          ]
+        },
+        "set_property": {
+          "ltw_mobs:recovering": false,
+          "ltw_mobs:stay": true
+        }
+      }
+    }
+  }
+}

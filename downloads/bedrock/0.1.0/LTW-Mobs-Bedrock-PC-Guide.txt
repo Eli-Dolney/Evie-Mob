@@ -1,0 +1,114 @@
+LTW MOBS BEDROCK 0.1.0 — FIRST PC TEST
+
+This is a test build for Evie the Dragon and Eli, King of the Seas.
+It contains their updated models, animations, spawn eggs, taming, saddles,
+follow/stay, flight, swimming, and companion protection.
+
+INSTALL ON WINDOWS
+
+1. Update and open Minecraft for Windows (Bedrock), not Minecraft Java.
+   Minimum supported game version: 1.21.90.
+2. Download ltw-mobs-bedrock-0.1.0.mcaddon onto your Windows PC.
+3. Double-click it, or choose Open with > Minecraft.
+4. Wait for the two packs to import.
+5. Create a NEW Creative test world with a wide open land area and a deep ocean.
+6. In the world's Add-Ons settings, open Behavior Packs > My Packs and activate
+   "LTW Mobs Bedrock — Behaviors".
+7. Check that "LTW Mobs Bedrock — Creatures" is also active under Resource Packs.
+   Activate it manually if needed. You need both packs.
+8. Leave experiments OFF. This pack is designed for the normal release game.
+9. Enter the world. Search the Creative inventory for Evie and Eli spawn eggs.
+   Spawn Evie on open ground and Eli in deep, open water.
+
+Optional commands (require cheats):
+  /summon ltw_mobs:evie
+  /summon ltw_mobs:eli
+
+TAMING AND RIDING
+
+Evie: Feed her glow berries five times.
+Eli: Feed him tropical fish five times.
+Hearts and a Trust: n/5 message show progress.
+If a different player feeds an untamed creature, their trust starts at one.
+Creative feeding keeps your items. Survival feeding consumes one each time.
+
+After taming, interact while holding a saddle to equip it.
+Select an empty hotbar slot, then right-click the creature to mount.
+Only the owner can saddle, command, or ride it. Each carries one rider.
+
+EVIE
+  On land: use normal movement controls.
+  Press Jump (normally Space) to take off.
+  Move forward and look where you want to fly.
+  Look upward to climb; look downward to descend.
+  Release movement to hover.
+  Descend onto open ground to land.
+
+ELI
+  Use normal movement controls and look where you want to swim.
+  Look down and move forward to dive; look up to surface.
+  Movement stops at dry boundaries or blocked water passages.
+  Use a broad, deep ocean for the first test: his collision box is 3 blocks wide.
+  He waits when following would take him onto land.
+
+FOLLOW / STAY
+  While unmounted, empty your hand, crouch (normally Shift), and right-click.
+  This toggles follow/stay. Eli follows while you are in water.
+
+DISMOUNT
+  Use Minecraft's normal dismount control (normally Shift).
+  Leaving Evie in flight grants slow falling.
+  Leaving Eli underwater grants 60 seconds of water breathing.
+  Eli provides water breathing and night vision while ridden underwater.
+
+Tamed companions are protected from normal damage in this test version.
+Custom islands, natural spawning, locators, boosting, and the 30-second
+recovery mechanic are not included yet.
+
+FIRST TEST CHECKLIST
+
+[ ] Both packs import and activate without an error.
+[ ] Both spawn eggs appear and summon the correct creature.
+[ ] Eyes, textures, wings/flippers, tail, and saddle look correct.
+[ ] Four feeds do not tame; the fifth feed does.
+[ ] Saddling, empty-hand mounting, and follow/stay work.
+[ ] Evie walks, takes off, steers, hovers, and lands.
+[ ] Eli steers, dives, surfaces, and stops before going onto land.
+[ ] Riders sit on the saddle without being hidden inside the model.
+[ ] Dismount protection works in air and underwater.
+[ ] Save and reopen: owner, saddle, trust, and follow/stay remain.
+[ ] Later: two players tame and ride separate creatures; reconnect safely.
+
+IF SOMETHING DOES NOT WORK
+
+Send the exact Minecraft version and what failed, plus a screenshot or short
+video if possible. For script errors, enable the Content Log GUI/file in
+Minecraft's Settings > Creator settings, then reproduce the problem and send
+the first LTW Mobs error. Also check that both packs are active.
+
+WHAT HAS BEEN CHECKED
+
+The scripts compile against the stable @minecraft/server 2.0.0 API.
+Eleven logic tests cover taming, food use, ownership, saved state, and swimming
+input. Pack references, manifest dependencies, all 186 model pieces, animation
+bone names, and face UVs have been checked. Both creature behavior definitions
+pass Mojang's published component schemas, with a documented upstream schema
+filename correction in the validation tool used during development.
+
+Windows Bedrock was not available on the development Mac. Importing into
+Minecraft, visual appearance, actual touch/controller input, collision feel,
+and multiplayer have NOT yet been verified in-game. This is ready for your
+first PC test, not a confirmed finished port.
+
+IPAD AND PS5 — AFTER THE PC TEST
+
+The controls use standard movement, looking, interaction, and Jump, so the
+same pack is designed for touch and controller use. Test iPad with your PC's
+multiplayer world next. After those tests, upload the Add-On-enabled world
+from Windows to a Bedrock Realm and join from iPad or PS5.
+
+EDITABLE SOURCE
+
+ltw-mobs-bedrock-0.1.0-source.zip includes both packs, original Blockbench
+models, textures, TypeScript scripts, build tools, and the focused tests.
+The original Java mod and its supplied ZIP have not been modified.

@@ -1,0 +1,10 @@
+entity.ltw_mobs:evie.name=Evie the Dragon
+entity.ltw_mobs:eli.name=Eli, King of the Seas
+item.spawn_egg.entity.ltw_mobs:evie.name=Spawn Evie the Dragon
+item.spawn_egg.entity.ltw_mobs:eli.name=Spawn Eli, King of the Seas
+action.interact.ltw_mobs.ride=Ride
+action.interact.ltw_mobs.care=Care / Ride
+item.ltw_mobs:sky_locator.name=Sky Island Locator
+item.ltw_mobs:sea_locator.name=Sea Lagoon Locator
+tile.ltw_mobs:sky_habitat_marker.name=Evie’s Habitat Crystal
+tile.ltw_mobs:sea_habitat_marker.name=Eli’s Habitat Crystal

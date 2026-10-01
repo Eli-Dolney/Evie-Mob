@@ -1,0 +1,14 @@
+{
+  "name": "ltw-mobs-bedrock",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "compile": "tsc -p tsconfig.json",
+    "test": "npm run compile && node --import ./tests/register-server.mjs --test tests/*.test.mjs && python3 tools/validate.py"
+  },
+  "devDependencies": {
+    "@minecraft/server": "2.0.0",
+    "typescript": "5.9.3"
+  }
+}

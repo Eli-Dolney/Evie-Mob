@@ -1,0 +1,12 @@
+{
+  "resource_pack_name": "LTW Mobs",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "sky_locator": {
+      "textures": "textures/items/sky_locator"
+    },
+    "sea_locator": {
+      "textures": "textures/items/sea_locator"
+    }
+  }
+}

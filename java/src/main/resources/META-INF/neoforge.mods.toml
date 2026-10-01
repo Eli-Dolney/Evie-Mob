@@ -1,0 +1,20 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="All Rights Reserved"
+[[mods]]
+modId="ltw_mobs"
+version="1.1.0"
+displayName="LTW Mobs"
+description="Evie the Dragon and ELi, King of the Seas: family-friendly island companions."
+[[dependencies.ltw_mobs]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.235]"
+ordering="NONE"
+side="BOTH"
+[[dependencies.ltw_mobs]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="NONE"
+side="BOTH"

@@ -1,0 +1,14 @@
+{
+  "type": "ltw_mobs:habitat",
+  "sky": true,
+  "biomes": [
+    "minecraft:plains",
+    "minecraft:meadow",
+    "minecraft:cherry_grove",
+    "minecraft:forest",
+    "minecraft:flower_forest"
+  ],
+  "spawn_overrides": {},
+  "step": "surface_structures",
+  "terrain_adaptation": "none"
+}

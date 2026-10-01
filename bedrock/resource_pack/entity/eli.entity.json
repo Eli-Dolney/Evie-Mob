@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ltw_mobs:eli",
+      "materials": {
+        "default": "entity_alphatest",
+        "glow": "entity_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/entity/eli",
+        "glow": "textures/entity/eli_glow"
+      },
+      "geometry": {
+        "default": "geometry.ltw_mobs.eli"
+      },
+      "animations": {
+        "pose": "animation.ltw_mobs.eli.pose",
+        "idle": "animation.ltw_mobs.eli.idle"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.motion = math.min(query.modified_move_speed * 4.0, 1.0);"
+        ],
+        "animate": [
+          "pose",
+          "idle"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ltw_mobs.base",
+        "controller.render.ltw_mobs.glow"
+      ],
+      "spawn_egg": {
+        "base_color": "#112746",
+        "overlay_color": "#13cfff"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "ltw_mobs:sky_island",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 40,
+    "separation": 16,
+    "salt": 481227
+  }
+}

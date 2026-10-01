@@ -1,0 +1,20 @@
+{
+  "evie": {
+    "cubes": 98,
+    "bones": 21,
+    "texture_sha256": "e3f76dfeb5e33dcd40cc7e06f22f8828bc70c6a19c388fb6e963623bd5a417a5",
+    "scale": 0.55,
+    "uv_mode": "per-face; source rectangles preserved, top/bottom reversed for Bedrock",
+    "uv_repairs": [
+      "leather seat: six out-of-atlas faces moved from y=516..520 to y=452..456"
+    ]
+  },
+  "eli": {
+    "cubes": 88,
+    "bones": 20,
+    "texture_sha256": "a1749e42b24d441569bad866501b1e6e6883c04db10b0048bfdf9c45cd84f1f0",
+    "scale": 0.74,
+    "uv_mode": "per-face; source rectangles preserved, top/bottom reversed for Bedrock",
+    "uv_repairs": []
+  }
+}

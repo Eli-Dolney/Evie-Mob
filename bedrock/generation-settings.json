@@ -1,0 +1,4 @@
+{
+  "sky_candidate_chance": { "numerator": 1, "denominator": 512 },
+  "sea_candidate_chance": { "numerator": 1, "denominator": 256 }
+}

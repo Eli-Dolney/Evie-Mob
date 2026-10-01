@@ -1,0 +1,131 @@
+LTW MOBS BEDROCK 0.2.0 — HABITATS AND COMPANIONS TEST
+
+Added: Evie's floating cherry island, Eli's tropical lagoon, one wild companion
+per habitat, craftable locators, boosting, healing, and optional 30-second rest.
+The earlier models, animations, taming, saddles, riding, and protection remain.
+
+INSTALL ON WINDOWS
+
+1. Update Minecraft for Windows (Bedrock). Minimum: 1.21.90.
+2. Download ltw-mobs-bedrock-0.2.0.mcaddon and double-click it to import.
+3. Create a NEW Creative test world, with cheats ON for the quick checks below.
+4. Activate "LTW Mobs Bedrock — Behaviors" in Behavior Packs > My Packs.
+5. Ensure "LTW Mobs Bedrock — Creatures" is active under Resource Packs too.
+6. Keep experiments OFF. Both packs are needed.
+7. Enter the world. Enable Content Log in Settings > Creator if diagnosing errors.
+
+0.2.0 keeps the earlier pack identities and is intended to upgrade 0.1.0 saved
+companions. Back up any earlier test world before upgrading it. Only one version
+of each pack should be active. Use a fresh world to test the new generation.
+The original Java mod and the older downloadable 0.1.0 build are preserved.
+
+FIND THEIR HOMES
+
+Evie: floating islands over Overworld land, with cherry trees, flowers, crystals,
+and a waterfall. Eli: deep lagoons with a sandy tropical ring and a wide opening
+to warm/lukewarm oceans. They are rare placement attempts in NEW terrain only.
+One companion is assigned to each home. Taming or leaving does not spawn another.
+A killed wild companion is not automatically replaced.
+
+Sky Island Locator: craft a compass + an amethyst shard at a crafting table.
+Sea Lagoon Locator: craft a compass + a prismarine shard at a crafting table.
+They also appear in Creative. Hold one to see direction, distance, coordinates;
+use it to refresh the message. A locator finds the nearest DISCOVERED habitat,
+shared across players. It cannot locate homes in unexplored terrain. It keeps
+pointing to the home after its companion leaves. Discovery requires the habitat
+crystal to load inside simulation distance. Do not copy/move these crystals.
+
+QUICK HABITAT TEST — WITHOUT SEARCHING FOR RARE SPAWNS
+
+In the new disposable Creative world, enter these commands in chat. Structure
+loading replaces blocks in its footprint: use these only away from your builds.
+
+  /structure load ltw_mobs:sky_island 100 110 100
+  /tp @s 123 131 123
+
+Fly down to the central crystal. Wait a few seconds for Evie to appear.
+The island is 47 x 28 x 47 blocks; its deck is at Y=126.
+
+  /structure load ltw_mobs:sea_lagoon 200 44 200
+  /tp @s 231 66 231
+
+Eli should appear in the center water, near Y=58. The lagoon is 63 x 30 x 63.
+Stay nearby so the crystal at Y=46 loads. Check both appear once after reloading.
+These commands test templates and spawning, NOT natural generation. For that,
+explore fresh land and warm/lukewarm ocean chunks and look for naturally placed
+habitats. No /locate command exists for these custom features.
+
+  /give @s ltw_mobs:sky_locator
+  /give @s ltw_mobs:sea_locator
+
+Creative eggs and /summon ltw_mobs:evie or /summon ltw_mobs:eli still work.
+
+CARE AND CONTROLS
+
+Tame Evie with five glow berries; tame Eli with five tropical fish. Hearts and
+Trust: n/5 show progress. A new feeder starts their own progress at one.
+Survival consumes one item per feed; Creative keeps it.
+Only the owner can add a saddle, command, heal, or ride. Each carries one rider.
+Add a saddle, select an EMPTY hand, then interact to mount.
+Unmounted: crouch + empty-hand interact toggles follow/stay.
+Eli follows through reachable water and waits when you are on land or blocked.
+
+Evie: normal movement on land. Jump to take off. Move forward and look where
+you want to fly. Release movement to hover; descend onto open ground to land.
+Eli: move and look where you want to swim. Look down to dive and up to surface.
+Use a broad deep area; his body is three blocks wide. He stops before dry land.
+
+Boost: Sprint for 1.6x speed if your riding controls pass Sprint through.
+Alternatively, after mounting, hold the matching locator and USE it for a
+five-second boost. It recharges ten seconds after activation. Use the standard
+item-use control on PC, touch, or controller. No custom keyboard keys are used.
+
+Dismount normally. Leaving airborne Evie grants slow falling. Leaving underwater
+Eli grants 60 seconds of water breathing. Eli gives underwater water breathing
+and night vision while riding. Disconnecting stops riding/boost movement.
+
+PROTECTION AND OPTIONAL RECOVERY
+
+Your default choice remains: tamed companions ignore normal damage.
+To try the Java-style damage + recovery mode, an operator can enter:
+
+  /scriptevent ltw_mobs:protection recovery
+
+The setting applies to all tamed companions and persists after reloads. Their
+play health is 100. Feed their usual food to heal 12 points. A fatal ordinary hit
+ejects the rider safely and starts 30 seconds of protected rest, then full health
+returns. Rest pauses when unloaded/world closed; commands and riding are blocked.
+Watch the action-bar health text: Bedrock mount hearts may show the separate
+native health reserve. Extreme damage and /kill are outside recovery protection.
+
+Test the timer on your mount, or nearest owned companion within 12 blocks:
+  /scriptevent ltw_mobs:recover test
+
+Restore the original damage immunity:
+  /scriptevent ltw_mobs:protection immune
+
+PC ACCEPTANCE CHECKLIST
+
+[ ] Both packs import/activate with experiments OFF and no Content Log errors.
+[ ] Manual templates look right; each crystal produces exactly one companion.
+[ ] New terrain naturally contains islands and tropical lagoons.
+[ ] Both locators craft, show known homes, and retain them after reopen.
+[ ] Four feeds do not tame; the fifth does. Saddles and rider placement work.
+[ ] Owner-only commands/riding work; another player's untamed feeds restart trust.
+[ ] Evie walks, takes off, steers, hovers, boosts, lands, and dismounts safely.
+[ ] Eli swims, dives, boosts, stops at shores/ceilings, and protects dismounts.
+[ ] Optional mode: food heals; fatal damage starts rest; rest lasts 30 loaded seconds.
+[ ] Reload during rest and during a ride: ownership/saddle/state remain; no duplicates.
+[ ] Later: PC+iPad players tame separately; disconnect/reconnect without drift.
+
+CHECKED HERE: stable API type-checking; 22 logic/script-host tests; pack links,
+NBT templates/palettes/spawn clearance, vanilla block names/states, recipes,
+texture references, all 186 model pieces, face UVs, animations, and archives.
+NOT CHECKED IN MINECRAFT: import, actual generation, appearances, controls,
+lethal-hit protection, collision behavior, touch/controller play, or multiplayer.
+Treat this as a test build. Send the exact game version, failed step, and first
+Content Log error if something fails; screenshots/video help with visual issues.
+
+After PC tests, join the PC world from iPad. Then upload the Add-On-enabled world
+from Windows to a Bedrock Realm for PS5/iPad testing. Keep the same Add-On.
+Editable source and full developer notes are in ltw-mobs-bedrock-0.2.0-source.zip.

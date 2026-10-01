@@ -1,0 +1,37 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.ltw_mobs.base": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "saddle": "query.property('ltw_mobs:saddled')"
+        }
+      ]
+    },
+    "controller.render.ltw_mobs.glow": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.glow"
+        }
+      ],
+      "textures": [
+        "Texture.glow"
+      ],
+      "part_visibility": [
+        {
+          "saddle": "query.property('ltw_mobs:saddled')"
+        }
+      ]
+    }
+  }
+}

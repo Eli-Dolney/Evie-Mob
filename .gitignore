@@ -1,0 +1,12 @@
+# Local build outputs and editor/cache files
+.DS_Store
+.idea/
+/java/.gradle/
+/java/build/
+/java/run/
+/java/run-server/
+/java/run-tests/
+/bedrock/node_modules/
+/bedrock/dist/
+**/__pycache__/
+*.pyc
