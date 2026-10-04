@@ -43,6 +43,15 @@ Remove any earlier LTW Mobs JAR from the same folder. Launch that profile.
 For Java multiplayer, every player and the server need the same mod and versions.
 See the [original Java guide](java/README.md) for care, controls, and habitats.
 
+### Shader pack
+
+[LTW Cosmic](shaderpacks/LTW_Cosmic) is the Iris shader for the Java world. It is separate from the mob mod.
+
+[Download LTW_Cosmic.zip](https://github.com/Eli-Dolney/Evie-Mob/raw/main/downloads/java/LTW_Cosmic.zip)
+
+It needs Minecraft Java 1.21.1, NeoForge 21.1.235, **Iris 1.8.12**, and **Sodium 0.6.13**. Sodium 0.8 crashes with this Iris build. Put the zip in the profile's `shaderpacks` folder and select **LTW Cosmic** in Iris. Do not unzip it.
+
+
 ## Editable source and earlier downloads
 
 - [Java project](java/) and [original Java source ZIP](downloads/java/ltw-mobs-1.1.0-source.zip)
