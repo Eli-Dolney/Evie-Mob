@@ -51,6 +51,12 @@ See the [original Java guide](java/README.md) for care, controls, and habitats.
 
 It needs Minecraft Java 1.21.1, NeoForge 21.1.235, **Iris 1.8.12**, and **Sodium 0.6.13**. Sodium 0.8 crashes with this Iris build. Put the zip in the profile's `shaderpacks` folder and select **LTW Cosmic** in Iris. Do not unzip it.
 
+[LTW Pastel Dream](shaderpacks/LTW_PastelDream) is a second Iris shader: a painterly, cel-shaded look with ink outlines, vivid sunsets, puffy toon clouds, and stylized water.
+
+[Download LTW_PastelDream.zip](https://github.com/Eli-Dolney/Evie-Mob/raw/main/downloads/java/LTW_PastelDream.zip)
+
+Same requirements as LTW Cosmic (Minecraft Java 1.21.1, NeoForge 21.1.235, **Iris 1.8.12**, **Sodium 0.6.13**). Put the zip in `shaderpacks` and select **LTW Pastel Dream** in Iris. Profiles: Default, Dreamy, Ink Comic, Performance.
+
 
 ## Editable source and earlier downloads
 

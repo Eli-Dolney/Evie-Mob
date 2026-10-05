@@ -1,0 +1,18 @@
+screen.LOOK=Look
+screen.LINES=Ink Lines
+
+option.BLOOM_STRENGTH=Bloom
+option.BLOOM_STRENGTH.comment=Soft glow around bright areas such as the sun and torches.
+option.OUTLINE_STRENGTH=Outline Strength
+option.OUTLINE_STRENGTH.comment=How strong the ink outlines are. 0 turns them off.
+option.OUTLINE_THICKNESS=Outline Thickness
+option.OUTLINE_THICKNESS.comment=Line width in pixels, scaled to resolution.
+option.SATURATION=Saturation
+option.SATURATION.comment=Color vibrancy of the world.
+option.FOG_AMOUNT=Distance Fog
+option.FOG_AMOUNT.comment=How much distant terrain fades into the sky color.
+
+profile.Default=Default
+profile.Dreamy=Dreamy
+profile.Ink=Ink Comic
+profile.Performance=Performance
